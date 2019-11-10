@@ -10,6 +10,17 @@
             "runOptions": {
                 "runOn": "folderOpen"
             }
+        },
+        {
+            "label": "Watch React files",
+            "command": "gulp",
+            "type": "shell",
+            "args": [
+                "watch"
+            ],
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         }
     ]
 }
