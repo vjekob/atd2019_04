@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const del = require("del");
 const run = require("gulp-run");
+var replace = require('gulp-replace');
 const colors = require("colors/safe");
 const config = require("./gulpfile.config.json");
 
@@ -10,6 +11,7 @@ const deleteDist = () => del("dist/", { force: true });
 
 const copyBundle = () => gulp
     .src(config.source.bundle)
+    .pipe(replace("//# sourceMappingURL=bundle.js.map", "//# sourceMappingURL=../images/bundle.js.map"))
     .pipe(gulp.dest(config.target.scripts));
 
 const copyBundleMap = () => gulp
