@@ -6,7 +6,8 @@
             "./src/**/*.css"
         ],
         "watchTimeout": 1000,
-        "bundle": "./dist/bundle.js"
+        "bundle": "./dist/bundle.js",
+        "map": "./dist/bundle.js.map"
     },
     "controlAddInScripts": {
         "watch": [
@@ -16,6 +17,7 @@
         "watchTimeout": 1000
     },
     "target": {
-        "scripts": "../AL/src/add-in/scripts"
+        "scripts": "../AL/src/add-in/scripts",
+        "images": "../AL/src/add-in/images"
     }
 }

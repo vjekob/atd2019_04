@@ -4,6 +4,9 @@ controladdin Simpler
         'src/add-in/scripts/bundle.js';
     StartupScript = 'src/add-in/scripts/start.js';
 
+    Images =
+        'src/add-in/images/bundle.js.map';
+
     RequestedHeight = 400;
     RequestedWidth = 600;
     MaximumHeight = 1200;

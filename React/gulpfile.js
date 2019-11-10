@@ -12,6 +12,10 @@ const copyBundle = () => gulp
     .src(config.source.bundle)
     .pipe(gulp.dest(config.target.scripts));
 
+const copyBundleMap = () => gulp
+    .src(config.source.map)
+    .pipe(gulp.dest(config.target.images));
+
 const copyControlAddInScripts = () => gulp
     .src(config.controlAddInScripts.scripts)
     .pipe(gulp.dest(config.target.scripts));
@@ -34,7 +38,7 @@ const watchReact = () => gulp.watch(
     gulp.series(
         sleep(config.source.watchTimeout),
         build,
-        copyBundle,
+        gulp.parallel(copyBundle, copyBundleMap),
         deleteDist
     ));
 
